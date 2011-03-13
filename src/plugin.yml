@@ -1,0 +1,11 @@
+name: Moar
+main: net.serenity.bukkit.moar.Moar
+version: 0.3.3
+author: MonsieurApple
+commands:
+  m:
+      description: Completes the stack of whatever you're holding.
+      usage: /<command> <#>
+  moar:
+      description: Completes the stack of whatever you're holding.
+      usage: /<command> <#>
