@@ -1,4 +1,3 @@
-
 package net.serenity.moar;
 
 import java.io.File;
@@ -64,7 +63,7 @@ public class Moar extends JavaPlugin
 					player.getInventory().addItem(new ItemStack(player.getInventory().getItemInHand().getTypeId(), 64 * (Integer.valueOf(args[0]) - 1), (short)0));
 				}
 			}
-			player.sendMessage("Here's some moar!");
+			player.sendMessage(ChatColor.GREEN + "Here's some moar!");
 			return true;
 		}
 		return false;
