@@ -22,8 +22,9 @@ import org.bukkit.ChatColor;
 
 public class Moar extends JavaPlugin
 {
-	int id;
 	protected static final Logger log = Logger.getLogger("Minecraft");
+	private ItemStack inHand;
+	private int id;
 
 	public void onDisable()
 	{
@@ -53,15 +54,16 @@ public class Moar extends JavaPlugin
 		
 		if(commandName.equalsIgnoreCase("m") || commandName.equalsIgnoreCase("moar"))
 		{
-			if(player.getInventory().getItemInHand().getTypeId() > 0)
+			inHand = player.getInventory().getItemInHand();
+			if(inHand.getTypeId() > 0)
 			{
-				player.getInventory().getItemInHand().setAmount(64);
+				inHand.setAmount(64);
 			}
 			if(args.length != 0)
 			{
 				if(Integer.parseInt(args[0]) > 1)
 				{
-					player.getInventory().addItem(new ItemStack(player.getInventory().getItemInHand().getTypeId(), 64 * (Integer.valueOf(args[0]) - 1), (short)0));
+					player.getInventory().addItem(new ItemStack(inHand.getTypeId(), 64 * (Integer.valueOf(args[0]) - 1), (short)inHand.getTypeId().getDurability()));
 				}
 			}
 			player.sendMessage(ChatColor.GREEN + "Here's some moar!");
