@@ -12,6 +12,7 @@ import org.bukkit.plugin.PluginLoader;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.bukkit.entity.HumanEntity;
 import org.bukkit.inventory.ItemStack;
+import org.bukkit.ChatColor;
 
 /**
  * Sets the stack count to 64 of whatever you're holding
