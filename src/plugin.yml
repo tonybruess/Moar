@@ -1,6 +1,6 @@
 name: Moar
 main: net.serenity.moar.Moar
-version: 0.3.4
+version: 0.4
 author: MonsieurApple
 commands:
   m:
